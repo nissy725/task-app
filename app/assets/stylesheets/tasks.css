@@ -3,7 +3,15 @@
   background-color: #86a2c9bb;
   width: 100vw;
   height: 70px;
+  padding: 20px;
 }
+
+.title a{
+  font-size: 30px;
+  color: rgba(255, 0, 0, 0.733);
+  text-decoration: none;
+}
+
 .main {
   background-color: #FFFFFF;
   width: 100vw;
@@ -18,10 +26,28 @@
   padding: 20px;
 }
 
+.members {
+  background-color: #cdd8e6;
+  height: calc(100vh - 100px);
+  padding: 20px;
+}
+
+.member {
+  background-color: #747a81;
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+.member-name a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 40px;
+  color: rgb(10, 10, 10);
+}
+
 .main-right {
   width: calc(100vw - 300px);
   background-color: aqua;
   height: calc(100vh - 70px);
   padding: 20px;
-}
 }
