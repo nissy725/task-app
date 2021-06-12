@@ -1,24 +1,45 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| name               | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+### Association
+- has_many :customers
+- has_many :suggestions
+- has_many :contracts
 
-Things you may want to cover:
 
-* Ruby version
+## customers テーブル
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| name       | string     | null: false                    |
+| product    | string     | null: false                    |
+| count      | integer    | null: false                    |
+| user       | references | null: false, foreign_key: true |
+### Association
+- belongs_to :user
 
-* System dependencies
 
-* Configuration
+## suggestions テーブル
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| name       | string     | null: false                    |
+| product    | string     | null: false                    |
+| count      | integer    | null: false                    |
+| user       | references | null: false, foreign_key: true |
+### Association
+- belongs_to :user
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## contracts テーブル
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| name       | string     | null: false                    |
+| product    | string     | null: false                    |
+| count      | integer    | null: false                    |
+| user       | references | null: false, foreign_key: true |
+### Association
+- belongs_to :user
