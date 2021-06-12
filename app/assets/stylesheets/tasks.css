@@ -1,0 +1,27 @@
+
+.hedder {
+  background-color: #86a2c9bb;
+  width: 100vw;
+  height: 70px;
+}
+.main {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: calc(100vh -70px);
+  display: flex;
+}
+
+.main-left {
+  background-color: #dfe6f0bb;
+  width: 300px;
+  height: calc(100vh - 70px);
+  padding: 20px;
+}
+
+.main-right {
+  width: calc(100vw - 300px);
+  background-color: aqua;
+  height: calc(100vh - 70px);
+  padding: 20px;
+}
+}
