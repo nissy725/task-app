@@ -7,13 +7,13 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      <a href="#">ユーザーネーム</a>
+      <%= link_to current_user.name, edit_user_path(current_user) %>
     </div>
   </div>
 
   <div class="right-header">
     <div class="header-button">
-      <a href="#">ログアウト</a>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     </div>
   </div>
 
