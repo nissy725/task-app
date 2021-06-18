@@ -7,7 +7,7 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      <a href="#">ユーザーネーム</a>
+      <%= link_to current_user.name, edit_user_path(current_user) %>
     </div>
   </div>
 
