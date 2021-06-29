@@ -14,9 +14,15 @@
     <% @customers.each do |customer| %>
       <tr>
         <td ><%= customer.id %></td>
-        <td style="height: 10%, width: 30%"> <%= customer.name %>         </td>
+        <td style="height: 10%, width: 30%"> <%= customer.name %> </td>
         <td style="width: 30%"> <%= customer.product %>      </td>
         <td style="width: 30%"> <%= customer.count %>        </td>
+        <td style="width: 15%">  
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+             <button class="btn btn-primary me-md-2" type="button"> 編集 </button>
+             <button class="btn btn-primary" type="button"> 削除 </button>
+          </div>
+        </td>
       </tr>
     <% end %>
    </tbody>
