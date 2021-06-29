@@ -1,8 +1,137 @@
-<div class="wrapper">
-  <div class="hedder">
-    <%= render "hedder" %>
+<body>
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Victory Road</a>
+      <ul class="nav px-5">
+        <li class="nav-item text-nowrap m-2">
+        <%= link_to current_user.name, edit_user_path(current_user),class:  "text-decoration-none text-white"%>
+        </li>
+        <li class="nav-item text-nowrap m-2">
+        <%= link_to "サインアウト", destroy_user_session_path, method: :delete,class:  "text-decoration-none text-white" %>
+        </li>
+      </ul>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                西藤尚信
+              </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                大谷翔平
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                松井秀喜
+              </a>
+            </li>
+          </ul>
+
+         
+         
+        </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-1 ">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
+          <h1 class="h2">今月の目標</h1>
+        </div>
+
+        <div class="card__wrapper">     
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <h3 class="text-center"> <%= link_to '架電件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1"> <%=@customer.count %> </h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center"> 目標 50 </h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center">アポ成約数</h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">11</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 20</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center">訪問件数</h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">8</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 10</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center">見込件数</h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">8</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 20</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center">提案社数</h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">6</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 15</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center">成約数</h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">2</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 10</h5>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </div>
-  <div class="main">
-    <%= render "main_task" %>
-  </div>
-</div>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+</body>
