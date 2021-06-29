@@ -20,7 +20,9 @@
         <td style="width: 15%">  
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
              <button class="btn btn-primary me-md-2" type="button"> 編集 </button>
-             <button class="btn btn-primary" type="button"> 削除 </button>
+             <button class="btn btn-primary" type="button"> 
+              <%= link_to '削除', customer_path(customer.id), method: :delete, class: "text-decoration-none text-white" %> 
+             </button>
           </div>
         </td>
       </tr>
@@ -28,5 +30,6 @@
    </tbody>
  </table>
 </body>
+
 
 
