@@ -1,0 +1,37 @@
+
+<body>
+ <table class="table table-light table-striped table-bordered table-hover h-25">
+   <thead>
+     <tr>
+       <th scope="col">#</th>
+       <th scope="col">顧客名</th>
+       <th scope="col">サービス名</th>
+       <th scope="col">台数</th>
+     </tr>
+   </thead>
+
+   <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td ><%= customer.id %></td>
+        <td style="height: 10%, width: 30%"> <%= customer.name %> </td>
+        <td style="width: 30%"> <%= customer.product %>      </td>
+        <td style="width: 30%"> <%= customer.count %>        </td>
+        <td style="width: 15%">  
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+             <button class="btn btn-primary me-md-2" type="button"> 
+               <%= link_to '編集', edit_customer_path(customer.id), method: :get, class: "text-decoration-none text-white" %> 
+             </button>
+             <button class="btn btn-primary" type="button"> 
+               <%= link_to '削除', customer_path(customer.id), method: :delete, class: "text-decoration-none text-white" %> 
+             </button>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+   </tbody>
+ </table>
+</body>
+
+
+

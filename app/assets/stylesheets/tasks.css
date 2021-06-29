@@ -1,3 +1,14 @@
+.wrapper{
+    background-image: url("/images/tassei.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 154%;  
+    background-color: #464646;
+    z-index: 0;
+}
+
+
 
 .hedder {
   background-color: #86a2c9bb;
@@ -30,21 +41,19 @@
 }
 
 .main {
-  background-color: #FFFFFF;
   width: 100vw;
   height: calc(100vh -70px);
   display: flex;
 }
 
 .main-left {
-  background-color: #dfe6f0bb;
   width: 300px;
   height: calc(100vh - 70px);
   padding: 20px;
 }
 
 .members {
-  background-color: #cdd8e6;
+  background-color: #c0d7f7bb;
   height: calc(100vh - 100px);
   padding: 20px;
 }
@@ -64,7 +73,38 @@
 
 .main-right {
   width: calc(100vw - 300px);
-  background-color: aqua;
   height: calc(100vh - 70px);
   padding: 20px;
+}
+
+
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
+.card {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+}
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.card__summary {
+  font-size: 16px;
+}
+.card__user {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
 }
