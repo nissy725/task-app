@@ -34,13 +34,12 @@
     <body>
     
       <h1>I'm a hard worker</h1>
-      
+       
       <div class="card__wrapper">     
         <div class="card" style="width: 18rem;">
           <div class="card-header">
-            <a href="#" class="card-link"> 
-              <h3 class="text-center">架電件数</h3>
-            </a>
+           <h3 class="text-center"><%= link_to '架電件数', customers_path, method: :get, class: "text-decoration-none"%>
+           </h3>
           </div>
           <div class="card-body">
             <h1 class="display-1">10</h1>

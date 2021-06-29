@@ -1,40 +1,26 @@
-<div class="main-left">
-  <div class="members">
-    <div class="member">
-      <div class="member-name">
-        <a href="#">西藤</a>
-      </div>
-    </div>
-    <div class="member">
-      <div class="member-name">
-        <a href="#">小林</a>
-      </div>
-    </div>
-    <div class="member">
-      <div class="member-name">
-        <a href="#">荒井</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="main-right">
-  <!doctype html>
-  <html lang="en">
-    <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+ <table class="table table-light table-striped table-bordered table-hover h-25">
+   <thead>
+     <tr>
+       <th scope="col">#</th>
+       <th scope="col">顧客名</th>
+       <th scope="col">サービス名</th>
+       <th scope="col">台数</th>
+     </tr>
+   </thead>
 
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td ><%= customer.id %></td>
+        <td style="height: 10%, width: 30%"> <%= customer.name %>         </td>
+        <td style="width: 30%"> <%= customer.product %>      </td>
+        <td style="width: 30%"> <%= customer.count %>        </td>
+      </tr>
+    <% end %>
+   </tbody>
+ </table>
+</body>
 
-      <title>私は仕事が大好きです。</title>
-    </head>
-    <body>
-      
-      test
 
-    </body>
-  </html>
-</div>
