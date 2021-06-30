@@ -11,6 +11,18 @@
   </head>
 
   <body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <%= link_to 'Victory Road', root_path,class: "navbar-brand col-md-3 col-lg-2 me-0 px-3" %>
+        <ul class="nav px-5">
+          <% if user_signed_in? %>
+            <li class="nav-item text-nowrap m-2"> <%= link_to current_user.name, edit_user_path(current_user),class:  "text-decoration-none text-white"%> </li>
+            <li class="nav-item text-nowrap m-2"> <%= link_to "サインアウト", destroy_user_session_path, method: :delete,class:  "text-decoration-none text-white" %> </li>
+          <% else %>
+            <li class="nav-item text-nowrap m-2"> <%= link_to 'ログイン', new_user_session_path, class:  "text-decoration-none text-white" %></li>
+            <li class="nav-item text-nowrap m-2"> <%= link_to '新規登録', new_user_registration_path, class:  "text-decoration-none text-white" %></li>
+          <% end %>
+        </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
