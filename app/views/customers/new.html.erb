@@ -6,16 +6,17 @@
         <%= f.label :顧客名, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: '顧客名を入力してください'%>
+        <%= f.text_field :name, class: 'chat-room-form__input', placeholder: '顧客名を入力してください'%>
       </div>
     </div>
 
     <div class='chat-room-form__field'>
+    
      <div class='chat-room-form__field--left'>
        <%= f.label :商品名, class: 'chat-room-form__label'%>
      </div>
      <div class='chat-room-form__field--right'>
-        <%= f.text_field :product, class: 'chat__room_name chat-room-form__input', placeholder: '商品名を入力してください'%>
+        <%= f.select :product, {'リース': 'リース', '保険': '保険'}, { include_blank: '選択してください'}, { class: 'chat-room-form__input text-secondary', required:true} %>
       </div>
     </div>
 
@@ -24,7 +25,7 @@
         <%= f.label :台数, class: 'chat-room-form__label'%>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.text_field :count, class: 'chat__room_name chat-room-form__input', placeholder: '台数を入力してください'%>
+        <%= f.text_field :count, class: 'chat-room-form__input', placeholder: '台数を入力してください'%>
       </div>
     </div>
 
