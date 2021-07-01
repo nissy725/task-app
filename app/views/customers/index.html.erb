@@ -25,7 +25,7 @@
                   <th>顧客名</th>
                   <th>サービス名</th>
                   <th>台数</th>
-                  <th>備考</th>
+                  <th>担当</th>
                   <th></th>
                 </tr>
               </thead>
@@ -37,7 +37,7 @@
                     <td><%= customer.name %> </td>
                     <td><%= customer.product %></td>
                     <td><%= customer.count %></td>
-                    <td>テスト</td>
+                    <td><%= customer.user.name %></td>
                     <td> 
                     <div class="btn-group me-2">
                       <button type="button" class="btn btn-sm "><%= link_to '編集', edit_customer_path(customer.id), method: :get, class: "text-decoration-none text-black-50" %> </button>
