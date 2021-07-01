@@ -3,7 +3,7 @@
     <div class="row">
       <div class="main">
         <%# ↓↓サイドバー↓↓ %>
-        <%= render "shared/side_bar"%>
+        <%= render "shared/side_bar", locals: {users: @users}%>
         <%# ↑↑サイドバー↑↑ %>
         <%#= render partial: "main_task"%>
 
