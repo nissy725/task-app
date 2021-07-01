@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @customer = Customer.all
+    @customers = Customer.all
+    @users = User.all
   end
 end

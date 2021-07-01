@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <%# ↓↓サイドバー↓↓ %>
-      <%= render "shared/side_bar"%>
+       <%= render "shared/side_bar", locals: {users: @users} %>
       <%# ↑↑サイドバー↑↑ %>
 
       <main class="col-md-9 ms-sm-1 ">
@@ -16,7 +16,7 @@
               <h3 class="text-center"> <%= link_to '架電件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
             </div>
             <div class="card-body">
-              <h1 class="display-1"> <%=@customer.count %> </h1>
+              <h1 class="display-1"> <%=@customers.count %> </h1>
             </div>
             <div class="card-footer">
               <h5 class="text-center"> 目標 50 </h5>
