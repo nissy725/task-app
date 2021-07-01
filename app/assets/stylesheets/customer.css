@@ -26,7 +26,7 @@ li {
 .chat-room-form {
   width: 980px;
   margin: 60px auto;
-  padding: 40px;
+  padding: 50px 100px 120px 10px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -56,7 +56,7 @@ li {
   display: inline-block;
   padding: 12px 20px;
   color: #fff;
-  background-color: #38aef0;
+  background-color: #7694a5;
   border: 0;
 }
 .chat-room-form__field {
@@ -77,6 +77,12 @@ li {
 .chat-room-form__field--right {
   float: right;
   width: 70%;
+}
+
+.chat-room-form__field--button {
+  float: right;
+  width: 70%;
+  margin-top: 30px;
 }
 
 select {
