@@ -5,6 +5,11 @@ class CustomersController < ApplicationController
     @users = User.all
   end
   
+  def show
+    @users = User.all
+    @user = User.find(params[:id])
+    @customers = @user.customers
+  end
 
   def new
     @customer = Customer.new
