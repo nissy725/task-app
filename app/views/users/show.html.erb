@@ -9,89 +9,9 @@
           <h1 class="h2"><%= @user.name %>さんの進捗</h1>
         </div>
 
-        <div class="card__wrapper">     
-          <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              <h3 class="text-center"> <%= link_to '架電件数', customer_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
-            </div>
-            <div class="card-body">
-              <h1 class="display-1"> <%=@customers.count %> </h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center"> 目標 50 </h5>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              <a href="#" class="card-link"> 
-                <h3 class="text-center">アポ成約数</h3>
-              </a>
-            </div>
-            <div class="card-body">
-              <h1 class="display-1">11</h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center">目標 20</h5>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              <a href="#" class="card-link"> 
-                <h3 class="text-center">訪問件数</h3>
-              </a>
-            </div>
-            <div class="card-body">
-              <h1 class="display-1">8</h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center">目標 10</h5>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              <a href="#" class="card-link"> 
-                <h3 class="text-center">見込件数</h3>
-              </a>
-            </div>
-            <div class="card-body">
-              <h1 class="display-1">8</h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center">目標 20</h5>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              <a href="#" class="card-link"> 
-                <h3 class="text-center">提案社数</h3>
-              </a>
-            </div>
-            <div class="card-body">
-              <h1 class="display-1">6</h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center">目標 15</h5>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-header">
-              <a href="#" class="card-link"> 
-                <h3 class="text-center">成約数</h3>
-              </a>
-            </div>
-            <div class="card-body">
-              <h1 class="display-1">2</h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center">目標 10</h5>
-            </div>
-          </div>
-        </div>
+        <%# ↓↓メイン画面ー↓↓ %>
+        <%= render "shared/main_index", locals: {customers: @customers} %>
+        <%# ↑↑メイン画面ー↑↑ %>
       </main>
     </div>
   </div>

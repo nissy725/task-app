@@ -1,0 +1,81 @@
+<div class="card__wrapper ">     
+          <div class="card" style="width: 18rem;">
+            <div class="card-header ">
+              <h3 class="text-center"> <%= link_to '見込件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1"> <%=@customers.count %> </h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center"> 目標 50 </h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <h3 class="text-center"> <%= link_to '提案件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1"> <%=@customers.count %> </h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center"> 目標 50 </h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+               <h3 class="text-center"> <%= link_to '保留件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">8</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 10</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center"> <%= link_to '敗退件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">8</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 20</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <a href="#" class="card-link"> 
+                <h3 class="text-center"> <%= link_to '成約件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+              </a>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">6</h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 15</h5>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <h3 class="text-center text-primary"> 受注率</h3>
+            </div>
+            <div class="card-body">
+              <h1 class="display-1">67<a class="h3 text-decoration-none text-body">%</a></h1>
+            </div>
+            <div class="card-footer">
+              <h5 class="text-center">目標 15</h5>
+            </div>
+          </div>
+
+         
+        </div>
