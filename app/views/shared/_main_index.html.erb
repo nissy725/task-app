@@ -3,13 +3,21 @@
           <div class="card" style="width: 18rem;">
             <div class="card-header ">
               <% if @user %>
-               <h3 class="text-center"> <%= link_to '見込件数', customer_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
+               <h3 class="text-center"> <%= link_to '見込件数', prospect_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
               <% else %>
                <h3 class="text-center"> <%= link_to '見込件数', prospects_path, method: :get, class: "text-decoration-none"%> </h3>
               <% end %>
             </div>
             <div class="card-body">
-              <h1 class="display-1"> <%=@customers.count %> </h1>
+              <h1 class="display-1"> 
+                 <% count = 0 %>
+                 <% @customers.each do |customer| %>
+                    <% if customer.status_id == 2 %>
+                      <%  count += 1 %>
+                    <% end %>
+                 <% end %>
+                 <%= count %> 
+              </h1>
             </div>
             <div class="card-footer">
               <h5 class="text-center"> 目標 50 </h5>
@@ -19,10 +27,22 @@
 
           <div class="card" style="width: 18rem;">
             <div class="card-header">
-              <h3 class="text-center"> <%= link_to '提案件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+              <% if @user %>
+               <h3 class="text-center"> <%= link_to '提案件数', proposal_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
+              <% else %>
+               <h3 class="text-center"> <%= link_to '提案件数', proposals_path, method: :get, class: "text-decoration-none"%> </h3>
+              <% end %>
             </div>
             <div class="card-body">
-              <h1 class="display-1"> <%=@customers.count %> </h1>
+              <h1 class="display-1"> 
+                 <% count = 0 %>
+                    <% @customers.each do |customer| %>
+                        <% if customer.status_id == 3 %>
+                          <%  count += 1 %>
+                        <% end %>
+                    <% end %>
+                 <%= count %> 
+              </h1>
             </div>
             <div class="card-footer">
               <h5 class="text-center"> 目標 50 </h5>
