@@ -28,9 +28,9 @@
           <div class="card" style="width: 18rem;">
             <div class="card-header">
               <% if @user %>
-               <h3 class="text-center"> <%= link_to '提案件数', proposal_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
+               <h3 class="text-center"> <%= link_to '提案中', proposal_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
               <% else %>
-               <h3 class="text-center"> <%= link_to '提案件数', proposals_path, method: :get, class: "text-decoration-none"%> </h3>
+               <h3 class="text-center"> <%= link_to '提案中', proposals_path, method: :get, class: "text-decoration-none"%> </h3>
               <% end %>
             </div>
             <div class="card-body">
@@ -52,9 +52,9 @@
           <div class="card" style="width: 18rem;">
             <div class="card-header">
               <% if @user %>
-               <h3 class="text-center"> <%= link_to '保留中', hold_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
+               <h3 class="text-center"> <%= link_to '保留', hold_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
               <% else %>
-               <h3 class="text-center"> <%= link_to '保留中', holds_path, method: :get, class: "text-decoration-none"%> </h3>
+               <h3 class="text-center"> <%= link_to '保留', holds_path, method: :get, class: "text-decoration-none"%> </h3>
               <% end %>
             </div>
             <div class="card-body">
@@ -127,35 +127,26 @@
             </div>
             <div class="card-body">
               <h1 class="display-1">
-              
-              <% count_losses = 0 %>
-              <% count_wins = 0 %>
-                   <% @customers.each do |customer| %>
-                       <% if customer.status_id == 5 %>
-                         <%  count_losses += 1 %>
-                       <% elsif customer.status_id == 6%>
-                         <%  count_wins += 1 %>
-                       <% end %>
-                   <% end %>
-
-                   <% if (count_losses + count_wins) == 0 %>
-                      <%= '-'%>
-                   <% else %>
-                      <% percent = (count_wins * 100)/(count_losses + count_wins)%> 
-                      <%= percent%>
-                   <% end %>
-
-
-
-
-
-              
-              <a class="h3 text-decoration-none text-body">%</a></h1>
-            </div>
-            <div class="card-footer">
-              <h5 class="text-center">目標 15</h5>
-            </div>
+                  <% count_losses = 0 %>
+                  <% count_wins = 0 %>
+                  <% @customers.each do |customer| %>
+                     <% if customer.status_id == 5 %>
+                        <%  count_losses += 1 %>
+                     <% elsif customer.status_id == 6%>
+                        <%  count_wins += 1 %>
+                     <% end %>
+                  <% end %>
+                  <% if (count_losses + count_wins) == 0 %>
+                    <%= '-'%>
+                  <% else %>
+                    <% percent = (count_wins * 100)/(count_losses + count_wins)%> 
+                    <%= percent %>
+                  <% end %>
+                  <a class="h3 text-decoration-none text-body">%</a>
+              </h1>
+             </div>
+             <div class="card-footer">
+               <h5 class="text-center">目標 70%</h5>
+             </div>
+           </div>
           </div>
-
-         
-        </div>
