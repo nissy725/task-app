@@ -126,7 +126,31 @@
               <h3 class="text-center text-primary"> 受注率</h3>
             </div>
             <div class="card-body">
-              <h1 class="display-1">67<a class="h3 text-decoration-none text-body">%</a></h1>
+              <h1 class="display-1">
+              
+              <% count_losses = 0 %>
+              <% count_wins = 0 %>
+                   <% @customers.each do |customer| %>
+                       <% if customer.status_id == 5 %>
+                         <%  count_losses += 1 %>
+                       <% elsif customer.status_id == 6%>
+                         <%  count_wins += 1 %>
+                       <% end %>
+                   <% end %>
+
+                   <% if (count_losses + count_wins) == 0 %>
+                      <%= '-'%>
+                   <% else %>
+                      <% percent = (count_wins * 100)/(count_losses + count_wins)%> 
+                      <%= percent%>
+                   <% end %>
+
+
+
+
+
+              
+              <a class="h3 text-decoration-none text-body">%</a></h1>
             </div>
             <div class="card-footer">
               <h5 class="text-center">目標 15</h5>
