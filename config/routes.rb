@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :customers
   resources :prospects, only: [:index, :show]
   resources :proposals, only: [:index, :show]
+  resources :holds, only: [:index, :show]
+  
 end
