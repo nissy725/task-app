@@ -1,7 +1,12 @@
-<div class="card__wrapper ">     
+<div class="card__wrapper ">
+
           <div class="card" style="width: 18rem;">
             <div class="card-header ">
-              <h3 class="text-center"> <%= link_to '見込件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+              <% if @user %>
+               <h3 class="text-center"> <%= link_to '見込件数', customer_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
+              <% else %>
+               <h3 class="text-center"> <%= link_to '見込件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+              <% end %>
             </div>
             <div class="card-body">
               <h1 class="display-1"> <%=@customers.count %> </h1>
@@ -10,6 +15,7 @@
               <h5 class="text-center"> 目標 50 </h5>
             </div>
           </div>
+          
 
           <div class="card" style="width: 18rem;">
             <div class="card-header">
