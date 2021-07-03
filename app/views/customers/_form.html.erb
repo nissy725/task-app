@@ -31,7 +31,7 @@
       <%= f.label :提案状況, class: 'chat-room-form__label'%>
     </div>
     <div class='chat-room-form__field--right'>
-      <%= f.select :status, {'未提案': '未提案', '提案中': '提案中', '保留中': '保留中', '敗退': '敗退', '成約': '成約'}, { include_blank: '選択してください'}, { class: 'chat-room-form__input text-secondary', required:true} %>
+      <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"chat-room-form__input text-secondary"}) %>
     </div>
   </div>
 
