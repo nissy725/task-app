@@ -18,6 +18,7 @@
 | name       | string     | null: false                    |
 | product    | string     | null: false                    |
 | count      | integer    | null: false                    |
+| status     | string     | null: false
 | user       | references | null: false, foreign_key: true |
 ### Association
 - belongs_to :user
