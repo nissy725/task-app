@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :prospects, only: [:index, :show]
   resources :proposals, only: [:index, :show]
   resources :holds, only: [:index, :show]
-  
+  resources :losses, only: [:index, :show]
+  resources :wins, only: [:index, :show]
 end
