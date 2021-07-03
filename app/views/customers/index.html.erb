@@ -37,7 +37,7 @@
                     <td><%= customer.name %> </td>
                     <td><%= customer.product %></td>
                     <td><%= customer.count %></td>
-                    <td>仮データ</td>
+                    <td><%= customer.status %></td>
                     <td><%= customer.user.name %></td>
                     <% if user_signed_in? && current_user.id == customer.user_id %>
                     <td> 

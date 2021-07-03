@@ -44,6 +44,6 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
-    params.require(:customer).permit(:name, :product, :count).merge(user_id: current_user.id)
+    params.require(:customer).permit(:name, :product, :count, :status).merge(user_id: current_user.id)
   end
 end
