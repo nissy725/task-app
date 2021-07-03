@@ -5,7 +5,7 @@
               <% if @user %>
                <h3 class="text-center"> <%= link_to '見込件数', customer_path(@user.id), method: :get, class: "text-decoration-none"%> </h3>
               <% else %>
-               <h3 class="text-center"> <%= link_to '見込件数', customers_path, method: :get, class: "text-decoration-none"%> </h3>
+               <h3 class="text-center"> <%= link_to '見込件数', prospects_path, method: :get, class: "text-decoration-none"%> </h3>
               <% end %>
             </div>
             <div class="card-body">
