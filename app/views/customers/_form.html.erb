@@ -13,16 +13,16 @@
       <%= f.label :商品名, class: 'chat-room-form__label'%>
     </div>
     <div class='chat-room-form__field--right'>
-      <%= f.select :product, {'リース': 'リース', '保険': '保険'}, { include_blank: '選択してください'}, { class: 'chat-room-form__input text-secondary', required:true} %>
+      <%= f.select :product, {'リース': 'リース', '保険': '保険', 'ガソリンカード': 'ガソリンカード', 'ETCカード': 'ETCカード', 'メンテナンス受託': 'メンテナンス受託'}, { include_blank: '選択してください'}, { class: 'chat-room-form__input text-secondary', required:true} %>
     </div>
   </div>
 
   <div class='chat-room-form__field'>
     <div class='chat-room-form__field--left'>
-      <%= f.label :台数, class: 'chat-room-form__label'%>
+      <%= f.label :"粗利(千円)", class: 'chat-room-form__label'%>
     </div>
     <div class='chat-room-form__field--right'>
-      <%= f.text_field :count, class: 'chat-room-form__input', placeholder: '台数を入力してください'%>
+      <%= f.text_field :count, class: 'chat-room-form__input', placeholder: '見込粗利を入力してください'%>
     </div>
   </div>
 
